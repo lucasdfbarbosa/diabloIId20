@@ -1,13 +1,27 @@
 //paranauês pra conectar e config bot
 import * as Discord from 'discord.js'
 import * as config from '../config.json'
+import { MONGODB_URI } from './db-config'
 import { COMMANDS } from './helpers/commands'
+import mongoose from 'mongoose'
 
 const bot = new Discord.Client()
 const prefix = '\\' // define prefixo
 
 bot.once('ready', () => {
   console.log('BOT logou', new Date().toLocaleString())
+})
+console.log(mongoose)
+mongoose.set('useCreateIndex', true) // stops annoying warning
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'))
+
+mongoose.connection.once('open', () => {
+  console.log('Connected to FUCKING DATABASE')
 })
 
 bot.on('message', function (message: Discord.Message) {
@@ -23,7 +37,7 @@ bot.on('message', function (message: Discord.Message) {
 
   } catch (e) {
     console.log(e)
-    message.reply('Sem quebrar o bot amiginho...')
+    message.reply('Sem quebrar o bot amiguinho...')
   }
 })
 

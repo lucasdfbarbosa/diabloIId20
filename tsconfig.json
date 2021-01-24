@@ -5,22 +5,32 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "importHelpers": true,
-    "jsx": "react",
-    "alwaysStrict": true,
+    //"importHelpers": true,
+    //"jsx": "react",
+    //"alwaysStrict": true,
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
+    //"noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitAny": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "resolveJsonModule": true
+    //"noImplicitThis": false,
+    //"strictNullChecks": false,
+    "resolveJsonModule": true,
+    "outDir": "build",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*",
+        // "src/types/*"
+      ]
+    },
+    "lib": [
+      "es2015"
+    ]
   },
   "include": [
-    "src/**/*",
-    "__tests__/**/*"
-  ]
+    "src/**/*"
+  ],
 }

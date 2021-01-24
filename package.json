@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Manage the server game Living Diablo d20",
   "engines": {
-    "node": ">= 14.15 <15"
+    "node": "12.19.0"
   },
   "devDependencies": {
     "@types/jest": "~26.0.15",
@@ -25,8 +25,8 @@
     "start": "node build/src/index.js",
     "start:watch": "nodemon build/src/index.js",
     "clean": "rimraf coverage build tmp",
-    "build": "tsc -p tsconfig.release.json",
-    "build:watch": "tsc -w -p tsconfig.release.json",
+    "build": "tsc",
+    "build:watch": "tsc -w",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
@@ -39,10 +39,12 @@
   "author": "\"Lucas Barbosa\"",
   "license": "ISC",
   "dependencies": {
-    "tslib": "~2.0.3",
+    "@types/mongoose": "^5.7.36",
     "discord.js": "^12.5.1",
     "discord.js-collector": "^1.8.1",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.9",
+    "tslib": "~2.0.3"
   },
   "volta": {
     "node": "14.15.0"
