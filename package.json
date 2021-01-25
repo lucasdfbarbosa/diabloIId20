@@ -40,10 +40,11 @@
   "license": "ISC",
   "dependencies": {
     "@types/mongoose": "^5.7.36",
+    "@types/ws": "^7.4.0",
     "discord.js": "^12.5.1",
     "discord.js-collector": "^1.8.1",
     "lodash": "^4.17.20",
-    "mongoose": "^5.10.9",
+    "mongoose": "5.10.9",
     "tslib": "~2.0.3"
   },
   "volta": {

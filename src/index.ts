@@ -11,7 +11,6 @@ const prefix = '\\' // define prefixo
 bot.once('ready', () => {
   console.log('BOT logou', new Date().toLocaleString())
 })
-console.log(mongoose)
 mongoose.set('useCreateIndex', true) // stops annoying warning
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
