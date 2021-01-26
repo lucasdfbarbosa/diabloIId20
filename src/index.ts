@@ -6,7 +6,7 @@ import { COMMANDS } from './helpers/commands'
 import mongoose from 'mongoose'
 
 const bot = new Discord.Client()
-const prefix = '\\' // define prefixo
+const prefix = '-' // define prefixo
 
 bot.once('ready', () => {
   console.log('BOT logou', new Date().toLocaleString())
